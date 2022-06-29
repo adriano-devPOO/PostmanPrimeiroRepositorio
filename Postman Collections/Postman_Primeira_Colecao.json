@@ -53,7 +53,7 @@
 									}
 								}
 							],
-							"_postman_id": "936cb65d-2027-4759-8b1a-91bb25fde46c",
+							"id": "936cb65d-2027-4759-8b1a-91bb25fde46c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -126,7 +126,7 @@
 									}
 								}
 							],
-							"_postman_id": "42d6782a-54cb-4548-9304-10f13500ad7a",
+							"id": "42d6782a-54cb-4548-9304-10f13500ad7a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -198,7 +198,7 @@
 									}
 								}
 							],
-							"_postman_id": "364c69d2-48ca-4fc7-9fc9-5ad13744d417",
+							"id": "364c69d2-48ca-4fc7-9fc9-5ad13744d417",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -275,7 +275,7 @@
 									}
 								}
 							],
-							"_postman_id": "55a99335-9f2e-4858-a10f-cb6a57e0ae99",
+							"id": "55a99335-9f2e-4858-a10f-cb6a57e0ae99",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -342,7 +342,7 @@
 									}
 								}
 							],
-							"_postman_id": "1d99c9c5-f559-4d7e-a108-da2e20c8cbb1",
+							"id": "1d99c9c5-f559-4d7e-a108-da2e20c8cbb1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -354,7 +354,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "252d5b58-8f6d-4e53-bfcf-680b6f924c6f",
+					"id": "252d5b58-8f6d-4e53-bfcf-680b6f924c6f",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -432,8 +432,7 @@
 								]
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Atualizar_Usuario",
@@ -467,7 +466,7 @@
 							}
 						}
 					],
-					"_postman_id": "ca56582b-e238-401f-aaec-a757f9cc51bf",
+					"id": "ca56582b-e238-401f-aaec-a757f9cc51bf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -501,7 +500,32 @@
 							}
 						}
 					],
-					"_postman_id": "9fef34be-17bb-48e0-837e-74d87abc6fe2",
+					"id": "9fef34be-17bb-48e0-837e-74d87abc6fe2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://gorest.co.in/public/v2/users/5632"
+					},
+					"response": []
+				},
+				{
+					"name": "Teste_Apagar_Usuario",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "29c72432-f797-4030-9fd2-d211af9df68b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5dc65830-1ba9-4160-b9e9-3d593bf08147",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -547,7 +571,7 @@
 							}
 						}
 					],
-					"_postman_id": "71080b8b-6137-41b3-a21e-5c395ebacb68",
+					"id": "71080b8b-6137-41b3-a21e-5c395ebacb68",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -568,7 +592,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "8ea04401-d259-4795-a757-6e7ee5ae650b"
+			"id": "8ea04401-d259-4795-a757-6e7ee5ae650b"
 		},
 		{
 			"name": "Comentario",
@@ -590,7 +614,7 @@
 									}
 								}
 							],
-							"_postman_id": "ffede0d6-dd86-42b2-8bd8-a104035dfb08",
+							"id": "ffede0d6-dd86-42b2-8bd8-a104035dfb08",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -655,7 +679,7 @@
 									}
 								}
 							],
-							"_postman_id": "c9c43a7c-0a40-430c-8d97-28fcb16677c4",
+							"id": "c9c43a7c-0a40-430c-8d97-28fcb16677c4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -724,7 +748,7 @@
 									}
 								}
 							],
-							"_postman_id": "572fcba2-caf8-4e30-90af-c4f8c258a274",
+							"id": "572fcba2-caf8-4e30-90af-c4f8c258a274",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -793,7 +817,7 @@
 									}
 								}
 							],
-							"_postman_id": "2455862a-92e6-4d21-abc6-9cbc96d8e752",
+							"id": "2455862a-92e6-4d21-abc6-9cbc96d8e752",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -859,7 +883,7 @@
 									}
 								}
 							],
-							"_postman_id": "db7a7dc6-f9e5-4a35-9940-a81ecde97b18",
+							"id": "db7a7dc6-f9e5-4a35-9940-a81ecde97b18",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -882,7 +906,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "4f1a5e76-e34d-40a8-bb09-ed777b998e4c",
+					"id": "4f1a5e76-e34d-40a8-bb09-ed777b998e4c",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -958,8 +982,7 @@
 								]
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Apagar _Comentario",
@@ -978,7 +1001,7 @@
 									}
 								}
 							],
-							"_postman_id": "f20407a8-788a-4239-bbff-437bb97cf1e8",
+							"id": "f20407a8-788a-4239-bbff-437bb97cf1e8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1003,7 +1026,7 @@
 									}
 								}
 							],
-							"_postman_id": "abacf726-9241-4cb1-b38f-13c024688057",
+							"id": "abacf726-9241-4cb1-b38f-13c024688057",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1015,8 +1038,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "870b6c2f-ebcf-4207-920c-251e347874ce",
-					"_postman_isSubFolder": true
+					"id": "870b6c2f-ebcf-4207-920c-251e347874ce"
 				},
 				{
 					"name": "Criar Comentario",
@@ -1038,7 +1060,7 @@
 							}
 						}
 					],
-					"_postman_id": "290b33fc-9195-40f7-a8fb-c9201c191ded",
+					"id": "290b33fc-9195-40f7-a8fb-c9201c191ded",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1059,18 +1081,17 @@
 					"response": []
 				}
 			],
-			"_postman_id": "581dab6f-e2c2-4bc2-a482-fe19518b9647"
+			"id": "581dab6f-e2c2-4bc2-a482-fe19518b9647"
 		},
 		{
 			"name": "New Request",
-			"_postman_id": "ae6d00b8-f176-433e-80fd-75fc370a2e30",
+			"id": "ae6d00b8-f176-433e-80fd-75fc370a2e30",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": []
 			},
 			"response": []
 		}
