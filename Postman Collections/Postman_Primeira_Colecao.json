@@ -1,0 +1,1189 @@
+{
+	"info": {
+		"_postman_id": "b3b72440-58d9-4537-a283-563ff93a12cd",
+		"name": "Go Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Pegar_Usuarios",
+					"item": [
+						{
+							"name": "Pegar_Usuario_ID",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ed2a1f00-c95e-4d4d-9dd3-231f9f0465bb",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "da165ac9-bcce-48d2-9474-69bd1d3a3f3e",
+										"exec": [
+											"pm.test(\"Local (Pegar Usuario Nome): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include('\"id\":'+pm.environment.get(\"id_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"'+pm.environment.get(\"nome_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"'+pm.environment.get(\"email_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém gender\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"gender\":\"male\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém status\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"status\":\"active\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "936cb65d-2027-4759-8b1a-91bb25fde46c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users/?id=5637",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5637"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar_Usuario_Nome",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0826cc43-03ca-4f7e-9562-22753a29a67d",
+										"exec": [
+											"pm.test(\"Local (Pegar Usuario Nome): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include('\"id\":'+pm.environment.get(\"id_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"'+pm.environment.get(\"nome_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"'+pm.environment.get(\"email_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém gender\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"gender\":\"male\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém status\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"status\":\"active\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "20b4a617-c4e9-42e9-90a4-3a569a84478a",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "42d6782a-54cb-4548-9304-10f13500ad7a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users?name=Adriano O",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Adriano O"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar_Usuario_Sexo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0826cc43-03ca-4f7e-9562-22753a29a67d",
+										"exec": [
+											"pm.test(\"Local (Pegar Usuario Nome): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include('\"id\":'+pm.environment.get(\"id_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"'+pm.environment.get(\"nome_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"'+pm.environment.get(\"email_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém gender\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"gender\":\"male\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém status\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"status\":\"active\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "20b4a617-c4e9-42e9-90a4-3a569a84478a",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "364c69d2-48ca-4fc7-9fc9-5ad13744d417",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users?id=5637&sexo=male",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5637"
+										},
+										{
+											"key": "sexo",
+											"value": "male"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar_Usuario_Email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0826cc43-03ca-4f7e-9562-22753a29a67d",
+										"exec": [
+											"pm.test(\"Local (Pegar Usuario Nome): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include('\"id\":'+pm.environment.get(\"id_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"'+pm.environment.get(\"nome_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"'+pm.environment.get(\"email_usuario\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém gender\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"gender\":\"male\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Usuario Nome): Contém status\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"status\":\"active\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "20b4a617-c4e9-42e9-90a4-3a569a84478a",
+										"exec": [
+											"console.log(pm.environment.get(\"email_usuario\"));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "55a99335-9f2e-4858-a10f-cb6a57e0ae99",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users?email=Halie_Lynch8@yahoo.com",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "Halie_Lynch8@yahoo.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar_Todos_Usuarios",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9a5ddf8c-a9a8-4281-9fc6-984ed4f37aa8",
+										"exec": [
+											"console.log(pm.info.eventName);\r",
+											"console.log(pm.info.iteration);\r",
+											"console.log(pm.info.iterationCount);\r",
+											"console.log(pm.info.requestName);\r",
+											"console.log(pm.info.requestId);\r",
+											"\r",
+											"console.log(pm.variables.get(\"email_usuario\"));\r",
+											"console.log(pm.globals.get(\"email\"));\r",
+											"console.log(pm.globals.get(\"nome\"));\r",
+											"console.log(pm.globals.get(\"numero\"));\r",
+											"console.log(pm.globals.get(\"sexo\"));\r",
+											"pm.globals.set(\"nome\", \"Pedro\");\r",
+											"console.log(pm.globals.get(\"nome\"));\r",
+											"console.log(pm.variables.get(\"token\"));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "3dec2368-4580-49f7-bb4d-3ecb7c73ecd7",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "1d99c9c5-f559-4d7e-a108-da2e20c8cbb1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://gorest.co.in/public/v2/users"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "252d5b58-8f6d-4e53-bfcf-680b6f924c6f",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a21ac3b5-d38d-4fac-ab04-fca381764f73",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f498fbe0-345e-4461-81b5-5f7106186286",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Ambiente(Usuários): Status code  200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Pagination-Total\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Total\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Pagination-Pages\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Pages\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Pagination-Page: 1\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Page\", \"1\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Pagination-Limit: 20\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Limit\", \"20\");",
+									"});",
+									"",
+									"/*",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Links-Previous\", function(){",
+									"    pm.response.to.have.header(\"X-Links-Previous\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Links-Current\", function(){",
+									"    pm.response.to.have.header(\"X-Links-Current\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém X-Links-Next\", function(){",
+									"    pm.response.to.have.header(\"X-Links-Next\");",
+									"});",
+									"*/",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém Content-Encoding: gzip\", function(){",
+									"    pm.response.to.have.header(\"Content-Encoding\", \"gzip\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém id\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"id\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém name\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"name\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém email\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"email\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém gender\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"gender\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Usuários) - Contém status\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"status\");",
+									"});"
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Atualizar_Usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8d9723e8-6186-4a7e-8e4c-eb74d42a275a",
+								"exec": [
+									"pm.test(\"Local (Pegar Usuario Nome): Contém id\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include('\"id\":'+5635);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Local (Pegar Usuario Nome): Contém name\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include('\"name\":\"Fabiola Tatiane\"');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Local (Pegar Usuario Nome): Contém email\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include('\"email\":\"fabiola@hotmail.br\"');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Local (Pegar Usuario Nome): Contém gender\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include('\"gender\":\"female\"');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Local (Pegar Usuario Nome): Contém status\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include('\"status\":\"active\"');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "ca56582b-e238-401f-aaec-a757f9cc51bf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fabiola Tatiane\",\r\n    \"email\": \"fabiola@hotmail.br\",\r\n    \"gender\": \"female\",\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://gorest.co.in/public/v2/users/5635"
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar_Usuario",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "29c72432-f797-4030-9fd2-d211af9df68b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "9fef34be-17bb-48e0-837e-74d87abc6fe2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://gorest.co.in/public/v2/users/5632"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar_Novo_Usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0377eba2-d1fe-469d-a528-8b43f01c0c27",
+								"exec": [
+									"pm.test(\"Local (Criar Novo Usuario) - Contém gender\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include(\"gender\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Local (Criar Novo Usuario) - Contém status\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7f830e17-e974-4afb-8fa0-7a36e993eb3f",
+								"exec": [
+									"console.log(\"Usuário criado com sucesso!\");\r",
+									"pm.iterationData.get(\"nome_usuario\");\r",
+									"pm.iterationData.get(\"genero_usuario\");\r",
+									"pm.iterationData.get(\"status_usuario\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "71080b8b-6137-41b3-a21e-5c395ebacb68",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{nome_usuario}}\",\r\n    \"gender\": \"{{genero_usuario}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"status\": \"{{status_usuario}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://gorest.co.in/public/v2/users"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "8ea04401-d259-4795-a757-6e7ee5ae650b"
+		},
+		{
+			"name": "Comentario",
+			"item": [
+				{
+					"name": "Pegar_Comentarios",
+					"item": [
+						{
+							"name": "Pegar_Todos_Comentarios",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "258cd7d3-cc75-4698-972e-3e5dbf2843c6",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "ffede0d6-dd86-42b2-8bd8-a104035dfb08",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url_comments}}"
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar_Comentarios_Id",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "26f85346-7cc6-405f-8a09-d908454646bb",
+										"exec": [
+											"//O primeiro a ser executado\r",
+											"//pm.variables.set(\"id_comments\", \"1860\");"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "69600571-cfc6-4ba6-9330-e9bd0bf18834",
+										"exec": [
+											"pm.test(\"Local (Pegar Comentarios Id): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1398\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Id): Contém post_id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"post_id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1167\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Id): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"Adriano O\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Id): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"back_front_bd_adrianosilva201509@email.com\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Id): Contém body\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"body\":\"Eu estou tentando e não estou conseguindo, ainda.\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "c9c43a7c-0a40-430c-8d97-28fcb16677c4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_comments}}/?id={{id_comments}}",
+									"host": [
+										"{{url_comments}}"
+									],
+									"path": [
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "{{id_comments}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar Comentarios Post_id",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "26f85346-7cc6-405f-8a09-d908454646bb",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "69600571-cfc6-4ba6-9330-e9bd0bf18834",
+										"exec": [
+											"pm.test(\"Local (Pegar Comentarios Post_id): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1398\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Post_id): Contém post_id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"post_id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1167\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Post_id): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"Adriano O\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Post_id): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"back_front_bd_adrianosilva201509@email.com\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Post_id): Contém body\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"body\":\"Eu estou tentando e não estou conseguindo, ainda.\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "572fcba2-caf8-4e30-90af-c4f8c258a274",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_comments}}/?post_id={{post_id_comments}}",
+									"host": [
+										"{{url_comments}}"
+									],
+									"path": [
+										""
+									],
+									"query": [
+										{
+											"key": "post_id",
+											"value": "{{post_id_comments}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar Comentarios Email",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "26f85346-7cc6-405f-8a09-d908454646bb",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "748b067d-4e36-4196-858a-9908b09455cb",
+										"exec": [
+											"pm.test(\"Local (Pegar Comentarios Email): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1398\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém post_id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"post_id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1167\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"Adriano O\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"back_front_bd_adrianosilva201509@email.com\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém body\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"body\":\"Eu estou tentando e não estou conseguindo, ainda.\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "2455862a-92e6-4d21-abc6-9cbc96d8e752",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_comments}}?email={{email_usuario}}",
+									"host": [
+										"{{url_comments}}"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "{{email_usuario}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pegar Comentarios Nome",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "26f85346-7cc6-405f-8a09-d908454646bb",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "748b067d-4e36-4196-858a-9908b09455cb",
+										"exec": [
+											"pm.test(\"Local (Pegar Comentarios Email): Contém id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1398\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém post_id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"post_id\");\r",
+											"    pm.expect(pm.response.text()).to.include(\"1167\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém name\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"name\":\"Adriano O\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém email\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"email\":\"back_front_bd_adrianosilva201509@email.com\"');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Local (Pegar Comentarios Email): Contém body\", function(){\r",
+											"    pm.expect(pm.response.text()).to.include('\"body\":\"Eu estou tentando e não estou conseguindo, ainda.\"');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "db7a7dc6-f9e5-4a35-9940-a81ecde97b18",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_comments}}?name={{nome_usuario}}",
+									"host": [
+										"{{url_comments}}"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "{{nome_usuario}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "4f1a5e76-e34d-40a8-bb09-ed777b998e4c",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "13bf2cb5-4c32-4250-a81f-d81d1c8b196b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "51bd3ac0-337e-4329-af80-c3846bf0a731",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Ambiente(Comentários): Status code  200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Pagination-Total\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Total\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Pagination-Pages\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Pages\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Pagination-Page: 1\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Page\", \"1\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Pagination-Limit: 20\", function(){",
+									"    pm.response.to.have.header(\"X-Pagination-Limit\", \"20\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Links-Previous\", function(){",
+									"    pm.response.to.have.header(\"X-Links-Previous\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Links-Current\", function(){",
+									"    pm.response.to.have.header(\"X-Links-Current\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém X-Links-Next\", function(){",
+									"    pm.response.to.have.header(\"X-Links-Next\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém Content-Encoding: gzip\", function(){",
+									"    pm.response.to.have.header(\"Content-Encoding\", \"gzip\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém id\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"id\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém post_id\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"post_id\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém name\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"name\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém email\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"email\");",
+									"});",
+									"",
+									"pm.test(\"Ambiente(Comentários) - Contém body\", function(){",
+									"    pm.expect(pm.response.text()).to.include(\"body\");",
+									"});"
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Apagar _Comentario",
+					"item": [
+						{
+							"name": "ApagarComentarioID",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "1c4191b7-3132-45a5-bcd2-95d199b74fa9",
+										"exec": [
+											"pm.environment.set(\"id_apagar_comentario\", \"1861\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "f20407a8-788a-4239-bbff-437bb97cf1e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url_comments}}/{{id_comments}}"
+							},
+							"response": []
+						},
+						{
+							"name": "ApagarComentarioPostID",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "1c4191b7-3132-45a5-bcd2-95d199b74fa9",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "abacf726-9241-4cb1-b38f-13c024688057",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url_comments}}/{{post_id_comments}}"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "870b6c2f-ebcf-4207-920c-251e347874ce",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Criar Comentario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3d4adde3-6e8b-433e-b226-2af2dbc20bed",
+								"exec": [
+									"pm.test(\"Local (Criar Comentário) - Contém post_id\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include(\"post_id\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Local (Criar Comentário) - Contém body\", function(){\r",
+									"    pm.expect(pm.response.text()).to.include(\"body\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "290b33fc-9195-40f7-a8fb-c9201c191ded",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": 1167,\r\n    \"name\": \"{{nome_usuario}}\",\r\n    \"email\": \"{{email_usuario}}\",\r\n    \"body\": \"Eu estou tentando e não estou conseguindo, ainda.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url_comments}}"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "581dab6f-e2c2-4bc2-a482-fe19518b9647"
+		},
+		{
+			"name": "New Request",
+			"_postman_id": "ae6d00b8-f176-433e-80fd-75fc370a2e30",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "e23677994167408ebfe6f7989b81cb9e58238b43de007986e81564dd099793ee"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8080e4bf-2c12-4f7d-8bb5-0c9a25e4a592",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8b6a0d0b-fa03-4d38-8476-e7e7ea8ddcba",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Coleção - Response no tempo de 2500ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(2500);",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém Server: nginx\", function () {",
+					"    pm.response.to.have.header(\"Server\", \"nginx\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém data\", function () {",
+					"    pm.response.to.have.header(\"Date\");",
+					"});",
+					"/*",
+					"pm.test(\"Coleção - Contém Content-Type: application/json; charset=utf-8\", function () {",
+					"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém Transfer-Encoding: chunked\", function(){",
+					"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+					"});",
+					"*/",
+					"pm.test(\"Coleção - Contém Connection:keep-alive\", function(){",
+					"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém Vary\", function(){",
+					"    pm.response.to.have.header(\"Vary\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-Frame-Options: Origin\", function(){",
+					"    pm.response.to.have.header(\"X-Frame-Options\", \"SAMEORIGIN\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-XSS-Protection: 0\", function(){",
+					"    pm.response.to.have.header(\"X-XSS-Protection\", \"0\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-Content-Type-Options: nosniff\", function(){",
+					"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-Download-Options: noopen\", function(){",
+					"    pm.response.to.have.header(\"X-Download-Options\", \"noopen\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-Permitted-Cross-Domain-Policies: none\", function(){",
+					"    pm.response.to.have.header(\"X-Permitted-Cross-Domain-Policies\", \"none\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém Referrer-Policy: strict-origin-when-cross-origin\", function(){",
+					"    pm.response.to.have.header(\"Referrer-Policy\", \"strict-origin-when-cross-origin\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-RateLimit-Limit: 90\", function(){",
+					"    pm.response.to.have.header(\"X-RateLimit-Limit\", \"90\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-RateLimit-Remaining\", function(){",
+					"    pm.response.to.have.header(\"X-RateLimit-Remaining\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-RateLimit-Reset\", function(){",
+					"    pm.response.to.have.header(\"X-RateLimit-Reset\");",
+					"});",
+					"/*",
+					"pm.test(\"Coleção - Contém ETag\", function(){",
+					"    pm.response.to.have.header(\"ETag\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém Cache-Control: max-age=0, private, must-revalidate\", function(){",
+					"    pm.response.to.have.header(\"Cache-Control\", \"max-age=0, private, must-revalidate\");",
+					"});",
+					"*/",
+					"pm.test(\"Coleção - Contém X-Request-Id\", function(){",
+					"    pm.response.to.have.header(\"X-Request-Id\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém X-Runtime\", function(){",
+					"    pm.response.to.have.header(\"X-Runtime\");",
+					"});",
+					"",
+					"pm.test(\"Coleção - Contém Strict-Transport-Security: max-age=63072000; includeSubDomains\", function(){",
+					"    pm.response.to.have.header(\"Strict-Transport-Security\", \"max-age=63072000; includeSubDomains\");",
+					"});",
+					""
+				]
+			}
+		}
+	]
+}
