@@ -532,7 +532,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "https://gorest.co.in/public/v2/users/5632"
+						"url": "https://gorest.co.in/public/v2/users/5764"
 					},
 					"response": []
 				},
