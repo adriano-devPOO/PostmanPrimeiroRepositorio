@@ -512,31 +512,6 @@
 					"response": []
 				},
 				{
-					"name": "Teste_Apagar_Usuario",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "29c72432-f797-4030-9fd2-d211af9df68b",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "5dc65830-1ba9-4160-b9e9-3d593bf08147",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": "https://gorest.co.in/public/v2/users/5764"
-					},
-					"response": []
-				},
-				{
 					"name": "Criar_Novo_Usuario",
 					"event": [
 						{
