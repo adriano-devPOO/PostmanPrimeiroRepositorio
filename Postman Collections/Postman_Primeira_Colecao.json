@@ -192,26 +192,18 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://gorest.co.in/public/v2/users?id=5637&sexo=male",
-									"protocol": "https",
+									"raw": "{{url_usuario}}?id={{id_usuario}}&sexo={{sexo_usuario}}",
 									"host": [
-										"gorest",
-										"co",
-										"in"
-									],
-									"path": [
-										"public",
-										"v2",
-										"users"
+										"{{url_usuario}}"
 									],
 									"query": [
 										{
 											"key": "id",
-											"value": "5637"
+											"value": "{{id_usuario}}"
 										},
 										{
 											"key": "sexo",
-											"value": "male"
+											"value": "{{sexo_usuario}}"
 										}
 									]
 								}
