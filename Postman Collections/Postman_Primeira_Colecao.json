@@ -488,7 +488,18 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "https://gorest.co.in/public/v2/users/5632"
+						"url": {
+							"raw": "{{url_usuario}}?id={{id_apagar_usuario}}",
+							"host": [
+								"{{url_usuario}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{id_apagar_usuario}}"
+								}
+							]
+						}
 					},
 					"response": []
 				},
