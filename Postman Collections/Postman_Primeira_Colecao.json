@@ -61,23 +61,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://gorest.co.in/public/v2/users/?id=5637",
-									"protocol": "https",
+									"raw": "{{url_usuario}}/?id={{id_usuario}}",
 									"host": [
-										"gorest",
-										"co",
-										"in"
+										"{{url_usuario}}"
 									],
 									"path": [
-										"public",
-										"v2",
-										"users",
 										""
 									],
 									"query": [
 										{
 											"key": "id",
-											"value": "5637"
+											"value": "{{id_usuario}}"
 										}
 									]
 								}
