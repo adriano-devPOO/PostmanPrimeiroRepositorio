@@ -452,7 +452,18 @@
 								}
 							}
 						},
-						"url": "https://gorest.co.in/public/v2/users/5635"
+						"url": {
+							"raw": "{{url_usuario}}?id={{id_atualizar_usuario}}",
+							"host": [
+								"{{url_usuario}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{id_atualizar_usuario}}"
+								}
+							]
+						}
 					},
 					"response": []
 				},
