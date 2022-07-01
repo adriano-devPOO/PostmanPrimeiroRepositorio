@@ -562,7 +562,7 @@
 								}
 							}
 						},
-						"url": "https://gorest.co.in/public/v2/users"
+						"url": "{{url_usuario}}"
 					},
 					"response": []
 				}
