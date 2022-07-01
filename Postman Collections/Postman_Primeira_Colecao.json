@@ -128,22 +128,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://gorest.co.in/public/v2/users?name=Adriano O",
-									"protocol": "https",
+									"raw": "{{url_usuario}}?name={{nome_usuario}}",
 									"host": [
-										"gorest",
-										"co",
-										"in"
-									],
-									"path": [
-										"public",
-										"v2",
-										"users"
+										"{{url_usuario}}"
 									],
 									"query": [
 										{
 											"key": "name",
-											"value": "Adriano O"
+											"value": "{{nome_usuario}}"
 										}
 									]
 								}
