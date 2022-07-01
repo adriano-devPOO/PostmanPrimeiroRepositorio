@@ -261,22 +261,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://gorest.co.in/public/v2/users?email=Halie_Lynch8@yahoo.com",
-									"protocol": "https",
+									"raw": "{{url_usuario}}?email={{email_usuario}}",
 									"host": [
-										"gorest",
-										"co",
-										"in"
-									],
-									"path": [
-										"public",
-										"v2",
-										"users"
+										"{{url_usuario}}"
 									],
 									"query": [
 										{
 											"key": "email",
-											"value": "Halie_Lynch8@yahoo.com"
+											"value": "{{email_usuario}}"
 										}
 									]
 								}
